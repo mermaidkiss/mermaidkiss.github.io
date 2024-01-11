@@ -1,0 +1,262 @@
+/* Add styles specific to invite.html if needed */
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between; /* Distribute items to the start and end of the flex container */
+    align-items: center; /* Center vertically within the nav bar */
+    padding: 10px 20px; /* Add padding for better spacing */
+}
+
+.logo {
+    max-width: 5vw;
+    min-width: 70px;
+    margin-left: 15vw; 
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0; /* Remove default margin */
+    margin-right: 10vw; 
+}
+
+li {
+    margin: 0 15px;
+}
+
+a.menu-link {
+    text-decoration: none;
+    color: purple; /* Change menu link text color to purple */
+    font-weight: bold;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    /*padding: 20px 0; */
+}
+
+@font-face {
+    font-family: 'goodvibrations_script';
+    src: url('fonts/goodvibrations_webfont/goodvibrations_script-webfont.woff2') format('woff2'),
+         url('fonts/goodvibrations_webfont/goodvibrations_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'goodvibrations_script', sans-serif;
+	color: purple;
+    font-size: 5vh;
+}
+
+header img {
+    width: 100%; /* Set the width to 100% of the viewport width */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 10px; /* Add some space below the image */
+}
+
+header h2 {
+    font-size: 3vh;
+}
+
+header h3 {
+    font-size: 2vh;
+    color: #333;
+}
+
+main {
+    margin: 0 auto; /* This will center the main section */
+    max-width: 800px; /* Adjust the max-width as needed */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#couple {
+    background-color: #fff;
+    padding: 10px;
+    /*border: 1px solid purple;  Add a purple border to the couple box */
+}
+
+.couple-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /*gap: 20px;*/
+    width: 55vw; /* Adjusted width to account for the gap */
+    height: 50vw; /* Twice the width of the box */
+    margin: 20px auto;
+    overflow: hidden; /* Hide the overflow content */
+}
+
+.couple-part {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description-groom,
+.description-bride {
+    background-color: #F1D6FE;
+    padding: 20px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 1s ease-out, max-width 1s ease-out;
+    max-width: 100%;
+    font-size: 2vh;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.couple-part.groom.animate-slide {
+    animation: slideInFromLeft 1s ease-out;
+    animation-fill-mode: forwards; /* Ensure the final state of the animation is maintained */
+    opacity: 1; /* Set final opacity to 1 */
+}
+
+.couple-part.bride.animate-slide {
+    animation: slideInFromRight 1s ease-out;
+    animation-fill-mode: forwards; /* Ensure the final state of the animation is maintained */
+    opacity: 1; /* Set final opacity to 1 */
+}
+
+.description-groom.animate-slide {
+    animation: slideInFromTop 1s ease-out;
+    animation-fill-mode: forwards; /* Ensure the final state of the animation is maintained */
+    opacity: 1; /* Set final opacity to 1 */
+}
+
+.description-bride.animate-slide {
+    animation: slideInFromBottom 1s ease-out;
+    animation-fill-mode: forwards; /* Ensure the final state of the animation is maintained */
+    opacity: 1; /* Set final opacity to 1 */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#invite-video {
+    text-align: center;
+}
+
+/* Set the width of the video player to 50% of the viewport width */
+#invite-video video {
+    height: auto; /* Maintain aspect ratio */
+    max-height: 70vh; /* Set maximum height to 50% of the viewport height */
+}
+
+.event-title {
+    text-align: center; /* Center-align the content */
+    padding: 10px; /* Add padding for better visual appeal */
+    border-radius: 8px; /* Add rounded corners to the box */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: repeat(5, 1fr); /* Five rows */
+    gap: 10px; /* Adjust the gap between columns and rows */
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Add rounded corners only to the top */
+}
+
+.event-details {
+    background-color: #FFF; /* Add a background color for better visual separation */
+    padding: 10px;
+    border-radius: 0 0 8px 8px; /* Add rounded corners only to the bottom */
+}
+
+.event-details h2 {
+	font-size: 3vh;
+    margin: 5px 0;
+    color: #333;
+}
+.event-details h3 {
+	font-size: 2vh;
+    margin: 5px 0;
+    color: #333;
+}
+.event-details p {
+	font-size: 2vh;
+    margin: 5px 0;
+    color: #333;
+}
+.event-details a {
+	font-size: 2vh;
+    margin: 5px 0;
+    color: #333;
+}
+
+
+/* Additional styles specific to invite.html can be added here if needed */
