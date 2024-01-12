@@ -1,155 +1,534 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Wedding</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Ravi & Gayathry getting hitched!</title>
+    <meta name="description" content="We would like to invite you to our big day.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Ravi & Gayathry getting hitched">
+    <meta property="og:description" content="We would like to invite you to our big day.">
+    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <script>
+        // load css files from CDN if local node_modules fail
+        function loadCssFromCDN(css) {
+            // create new link tag
+            const link = document.createElement('link');
+            if (css === 'animate.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+            } else if (css === 'font-awesome.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+            }
+            link.rel = 'stylesheet';
+
+            // add link tag to head section
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        // load js files from CDN if local node_modules fail
+        function loadJsFromCDN(js) {
+            if (js === 'waypoints.js') {
+                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            } else if (js === 'jquery.js') {
+                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+<body id="top">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<section class="hero">
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="header-nav">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="#intro">The Couple</a></li>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#instagram">Instagram</a></li>
+                            <li><a href="#eng-pics">Our Journey</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the Country</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li><a href="#map" class="login">Venue</a></li>
+                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <!--<h1>Ravi and Gayathry</h1>-->
+                    <img src="img/logo-lg.png">
+                    <!--<p class="intro">Ravi and Gayathry are getting hitched!</p>-->
+                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 hidden-xs"></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
+                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+            <div class="col-sm-4 hidden-xs"></div>
+        </div>
+    </div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+</section>
 
-<body>
-    <nav>
-        <img class="logo" src="images/RG logo.png" alt="Your Logo"> <!-- Logo on the left -->
-        <ul>
-            <li><a class="menu-link" href="#">Home</a></li>
-            <li><a class="menu-link" href="#couple">Couple</a></li>
-            <li><a class="menu-link" href="#events">Events</a></li>
-            <li><a class="menu-link" href="#invite">Invitation</a></li>
-            <li><a class="menu-link" href="#rsvp">RSVP</a></li>
-        </ul>
-    </nav>
+<section id="invitation" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>We are getting hitched</h3>
+                <p>The dates are 27<sup>th</sup> & 28<sup>th</sup> of November '17 and we would like you to be a part of
+                    it.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <header>
-        <!-- Image replacing the logo and text -->
-        <img src="images/Header BG.jpg" alt="Header Background Image">
-        <h1>On 18 Feb 2024 </h1>
-		<h2>Venue : Sri Renganathar Temple</h2>
-        <h3>4300, Jalan Ikram-Uniten, Kawasan Institusi Bangi,<br>43000 Kajang, Selangor, Malaysia<br><br><br></h3>
-    </header>
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">The Couple</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/IMG_2317.jpg" class="wp1"></div>
+            <div class="col-md-6">
+                <p>
+                    You have to write something bae ma or we'll need to ask chatgpt :)
+                    and we can change the pictures if you want
+                </p>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.jpg" class="wp9"></div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp10"></div>
+        </div>
+    </div>
+</section>
 
-    <main>
-		<section id="couple">
-			<div class="couple-container">
-				<div class="couple-part groom">
-					<img src="images/groom.jpg" alt="Groom's Picture">
-				</div>
-				<div class="couple-part description-groom">
-					<p>The Groom: Placeholder text about the groom goes here.</p>
-				</div>
-				<div class="couple-part description-bride">
-					<p>The Bride: Placeholder text about the bride goes here.</p>
-				</div>
-				<div class="couple-part bride">
-					<img src="images/bride.jpg" alt="Bride's Picture">
-				</div>
-			</div>
-		</section>
+<section class="events section-padding" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header">Festive Episodes</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <h5>16th February <span class="time">6:30 PM Onwards</span></h5>
+                    <h5>PANTHAKAAL <span class="time">"Embarking on Love's Journey - A Prelude to Forever"</span></h5>
+                    <p>Elevate the anticipation of union with the symbolic Pandakkal Pooja,
+                        a day-before ritual infused with familial reverence. A bamboo pole, embodying fertility,
+                        is erected to ward off evil glances and seek blessings for a harmonious marriage journey.
+                        Gathered under familial gaze, prayers ensue, and the pole adorned with Manjal
+                        and Kumkum stands tall, ready to usher in the divine blessings.<br>
+                        <a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">
+                            55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor, Malaysia</a></p>
+                </div>
+                <div class="wp5">
+                    <h5>17th February <span class="time">6:30 PM Onwards</span></h5>
+                    <h5>NALUNGU <span class="time"> "Colors of Joy, Bonds of Love - A Playful Celebration"</span></h5>
+                    <p>As evening hues paint the sky, the bride and groom partake in the unique Nalangu ritual.
+                        Seated on mats in the marriage pandal, a playful exchange unfolds. Turmeric paste,
+                        symbolizing blessings and vibrancy, is shared as they stretch out legs,
+                        embodying a journey marked by mutual care. Laughter echoes in this intimate moment,
+                        creating a canvas of joy for the love story unfolding.<br>
+                        <a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">
+                            55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor, Malaysia</a></p>
+                </div>
+                <div class="wp7">
+                    <h5>02nd March <span class="time">6:30 PM Onwards</span></h5>
+                    <h5>RECEPTION <span class="time"> "Dancing into Forever - A Night of Love and Laughter"</span></h5>
+                    <p>Step into the grandeur of the wedding reception, a jubilant affair held after the
+                        sacred ceremony. The newlyweds receive society, friends, and family, marking their
+                        debut as a married couple. Amidst enchanting decor and joyful toasts, the reception
+                        becomes a celebration of love, weaving the first threads of their shared journey
+                        into the tapestry of forever.<br>
+                        <a href="https://maps.app.goo.gl/584cRW7ztMhdUB3s9" target="_blank">
+                            Sri Annai Mahal A/C, Thiruvottiyur High Rd, Old Washermanpet, Chennai</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp4">
+                    <h5>17th February <span class="time">8:30 AM Onwards</span></h5>
+                    <h5>MEHANDHI <span class="time"> "In Henna and Happiness - Love Unveils Its Beauty"</span></h5>
+                    <p>Immerse in the Mehndi Ceremony, a tapestry of positive spirits and well-wishes.
+                        The night before the wedding, henna is artfully applied, symbolizing good health
+                        and prosperity for the bride's journey. A celebration where female bonds intertwine,
+                        Mehndi's cooling touch serves as a prelude to joy, relieving any pre-wedding stress.
+                        The intricate patterns unfold, echoing the beauty of an upcoming union.<br>
+                        <a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">
+                            55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor, Malaysia</a></p>
+                </div>
+                <div class="wp6">
+                    <h5>18th February <span class="time">8:30 AM Onwards</span></h5>
+                    <h5>WEDDING CEREMONY <span class="time">  "Sacred Vows, Eternal Promises - Our Journey Begins"</span></h5>
+                    <p>Feel the pulse of excitement as the wedding ceremony commences. Amidst the rhythmic
+                        beats of traditional Mangala Vadhyam, the groom ties the sacred Mangal Sutra around
+                        the bride's neck, symbolizing eternal union. Surrounded by the gathered crowd,
+                        the air is thick with joy, and the sacred vows resonate, echoing the beginning
+                        of a timeless journey together.<br>
+                        <a href="https://maps.app.goo.gl/jww7kahfF5RXgFpP8" target="_blank">
+                            Sri Renganathar Temple, 4300, Jalan Ikram-Uniten, Kawasan Institusi Bangi, 43000 Kajang, Selangor, Malaysia</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
+                </a>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col-xs-12 section-border section-padding">
+            </div>
+        </div>-->
+    </div>
 
-		<section id="events">
-			<div class="event-title">
-				<h1 class="events-title">Wedding Events</h1>
-			</div>
-			<br>
-			<div class="events-container">
-				<div class="event-box">
-					<div class="event-image">
-						<img src="images/panthakaal.jpg" alt="Panthakaal Image">
-					</div>
-				</div>
-				<div class="event-box">
-					<div class="event-details">
-						<h2>Panthakaal</h2>
-						<h3>Feb 16th 2024 at 6.30 pm</h3>
-						<p>55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor, Malaysia</p>
-						<a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">View on Google Maps</a>
-					</div>
-				</div>
+    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
+                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
+                    <p>
+                        <strong>Ethnic indian wear</strong>
+                        <br>
+                        Ladies can wear something
+                        <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-women/">bright & vivid</a>
+                        and gentlemen can be on
+                        their <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-men/">vibrant
+                        kurtas</a> with pants or pyjamas along with an optional shawl.
+                    </p>
+                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
+                    <p>
+                        <strong>Western attire</strong>
+                        <br>
+                        A semi-formal look that is contemporary & fashionable which is not too prim & proper is the best
+                        to pull off this night. You can see some pins for
+                        <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">ladies</a>
+                        & <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">gents</a>.
+                    </p>
+                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
+                    <p>
+                        <strong>Indo-western</strong>
+                        <br>
+                        Ladies can flaunt their unconventional sarees,
+                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengas</a>,
+                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkalis</a>,
+                        dresses and the list
+                        goes on whereas gentlemen can wear any kind of suit or just blazer. If you don't like to wear a
+                        suit/blazer, you can do a <a
+                            href="https://www.pinterest.com/ramswarooppatra/high-neck-jackets-for-men/">high-neck
+                        (band gala) waistcoat & shirt</a> combo.
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-				<div class="event-box">
-					<div class="event-details">
-						<h2>Mehandhi</h2>
-						<h3>Feb 17th 2024 at 8.30 am</h3>
-						<p>55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor, Malaysia</p>
-						<a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">View on Google Maps</a>
-					</div>
-				</div>
-				<div class="event-box">
-					<div class="event-image">
-						<img src="images/mehandhi.jpg" alt="Mehandhi Image">
-					</div>
-				</div>
+</section>
 
-				<div class="event-box">
-					<div class="event-image">
-						<img src="images/nalungu.jpg" alt="Nalangu Image">
-					</div>
-				</div>
-				<div class="event-box">
-					<div class="event-details">
-						<h2>Nalangu</h2>
-						<h3>Feb 17th 2024 at 6.30 pm</h3>
-						<p>55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor, Malaysia</p>
-						<a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">View on Google Maps</a>
-					</div>
-				</div>
+<section id="instagram" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>A picture is worth a thousand words!</h3>
+                <p>Help us capture the moment, tag your photos with the hashtag
+                    <a href="https://instagram.com/explore/tags/ravigayutietheknot/" target="_blank">#RaviGayuTieTheKnot</a>
+                </p>
+            </div>
+        </div>
+        <div class="row section-border wp8">
+            <div class="col-md-4 col-md-offset-4">
+                <img src="img/iphone_instagram.jpg">
+            </div>
+        </div>
+    </div>
+</section>
 
-				
-				<div class="event-box">
-					<div class="event-details">
-						<h2>Wedding Ceremony</h2>
-						<h3>Feb 18th 2024 from 8.30 am onwards</h3>
-						<p>Sri Renganathar Temple, 4300, Jalan Ikram-Uniten, Kawasan Institusi Bangi, 43000 Kajang, Selangor, Malaysia</p>
-						<a href="https://maps.app.goo.gl/jww7kahfF5RXgFpP8" target="_blank">View on Google Maps</a>
-					</div>
-				</div>
-				<div class="event-box">
-					<div class="event-image">
-						<img src="images/wedding.jpg" alt="Wedding Ceremony Image">
-					</div>
-				</div>
+<section id="eng-pics" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 class="header">Our Journey Together</h3>
+            </div>
+        </div>
+        <div class="row">
+            <script>
+                function playVideo(videoId) {
+                    var video = document.getElementById("videoId");
+                    video.play();
+                }
+            </script>
+            <div class="col-md-2">
+                <div class="img-wrap">
+                    <div class="overlay" onclick="playVideo('videoPlayer1')">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <video width="100%" height="100%" id="videoPlayer" controls>
+                        <source src="videos/how it started.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="img-wrap">
+                    <div class="overlay" onclick="playVideo('videoPlayer2')">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <video width="100%" height="100%" id="videoPlayer" controls>
+                        <source src="videos/our first meet.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="img-wrap">
+                    <div class="overlay" onclick="playVideo('videoPlayer3')">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <video width="100%" height="100%" id="videoPlayer" controls>
+                        <source src="videos/her india visit.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="img-wrap">
+                    <div class="overlay" onclick="playVideo('videoPlayer4')">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <video width="100%" height="100%" id="videoPlayer" controls>
+                        <source src="videos/our first bike.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="img-wrap">
+                    <div class="overlay" onclick="playVideo('videoPlayer5')">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <video width="100%" height="100%" id="videoPlayer" controls>
+                        <source src="videos/our first christmas.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="img-wrap">
+                    <div class="overlay" onclick="playVideo('videoPlayer6')">
+                        <i class="fa fa-play"></i>
+                    </div>
+                    <video width="100%" height="100%" id="videoPlayer" controls>
+                        <source src="videos/how it started.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-border section-padding"></div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <div class="diamond floating-logo">
+                <img src="img/sketch-logo.png" alt="Sketch Logo">
+                <div class="ring"></div>
+            </div>
+        </div>
+    </div>-->
+</section>
 
-				<div class="event-box">
-					<div class="event-image">
-						<img src="images/reception.jpg" alt="Reception Image">
-					</div>
-				</div>
-				<div class="event-box">
-					<div class="event-details">
-						<h2>Reception</h2>
-						<h3>March 2nd 2024 from 6.30 pm onwards</h3>
-						<p>Sri Annai Mahal A/C, Plot No, 842, Thiruvottiyur High Rd, Korukkupet, Old Washermanpet, Chennai, Tamil Nadu 600021</p>
-						<a href="https://maps.app.goo.gl/584cRW7ztMhdUB3s9" target="_blank">View on Google Maps</a>
-					</div>
-				</div>
-			</div>
-		</section>
+<section id="video-bg" class="hidden-sm hidden-xs">
+    <div id="bgndVideo" class="player"
+         data-property="{videoURL:'https://youtu.be/EVG-IH8cMYs',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:60, stopAt:77, opacity:1}">
+    </div>
+    <div id="video-content">
+        <h5>Malaysia</h5>
+        <p>country known for its diverse cultural influences, vibrant cities,tropical rainforests,
+            and a unique blend of Malay, Chinese, Indian, and indigenous cultures.</p>
+    </div>
+</section>
 
-        <section id="invite">
-			<div class="event-title">
-				<h1 class="events-title">Invitation</h1>
-			</div>
+<section id="map" class="section-padding">
+    <div class="text-center">
+        <h3>How do I get there?, It's way easier than you think!</h3><br>
+        <p><strong>On 16th and 17th February,</strong><br>
+            55, Jalan 7/3a, Seksyen 7, Bandar Baru Bangi, 43650 Selangor,<br>Malaysia<br>
+            <a href="https://maps.app.goo.gl/RmbdCFNiwFqW6aA86" target="_blank">
+                Click to view on Google Maps</a></p>
+        <br>
+        <p><strong>On 18th February,</strong><br>
+            Sri Renganathar Temple, 4300,<br>Jalan Ikram-Uniten, Kawasan Institusi Bangi, 43000 Kajang, Selangor,<br>Malaysia<br>
+            <a href="https://maps.app.goo.gl/jww7kahfF5RXgFpP8" target="_blank">
+                Click to view on Google Maps</a></p>
+        <br>
+        <p><strong>On 18th February,</strong><br>
+            Sri Annai Mahal A/C,<br>Thiruvottiyur High Rd, Old Washermanpet, Chennai,<br>India<br>
+            <a href="https://maps.app.goo.gl/584cRW7ztMhdUB3s9" target="_blank">
+                Click to view on Google Maps</a></p>
+    </div>
+</section>
 
-			<!-- Center-aligned video player -->
-			<div id="invite-video">
-				<video controls>
-					<source src="videos/invite.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-			</div>
-		</section>
+<section class="rsvp text-center" id="rsvp">
 
-        <section id="rsvp">
-            <h2>RSVP</h2>
-            <!-- Add your RSVP form here -->
-        </section>
-    </main>
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us on our big day.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-    <footer>
-        <p>&copy; 2024 Your Wedding. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>What are you waiting for?</h3>
+                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="Your email"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
+                                                                  max="4"
+                                                                  placeholder="Husband/Wife or kids"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="0"
+                                                                placeholder="Invite code"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Yes,
+                        that's me!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center content">
+                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                <p>Crafted by Ravi with lots of <span class="fa fa-heart pulse2"></span> for Gayathry</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/vendor/ouical.js"></script>
+<script src="js/scripts.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46465113-4', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
-
 </html>
