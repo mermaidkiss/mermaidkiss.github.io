@@ -256,6 +256,10 @@
         letter-spacing: 10px;
     }
 
+    #bgndVideo {
+        position: relative;
+    }
+
     #video-bg-india {
         height: 300px;
     }
@@ -273,6 +277,10 @@
         font-size: 30px;
         font-weight: 300;
         letter-spacing: 10px;
+    }
+
+    #bgndVideoIndia {
+        position: relative;
     }
 
     #map-content-wrapper {
